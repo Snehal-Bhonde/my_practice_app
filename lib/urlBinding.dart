@@ -7,17 +7,8 @@ import 'package:my_practice_app/urls.dart';
 enum Flavors { DEV, QA, UAT, PROD, PRE_PROD }
 
 class FlavorConfig {
-  factory FlavorConfig({required Flavors? flavor}) {
-    _instance ??= FlavorConfig._internal(
-      flavor!,
-      getValue(flavor),
-      getCustomerBaseUrl(flavor),
-      getMoneysignBaseUrl(flavor),
-      getIdsBaseUrl(flavor),
-      getForYouBaseUrl(flavor),
-      getMagazineBaseUrl(flavor),
-    );
-    return _instance!;
+   FlavorConfig({required Flavors? flavor}) {
+
   }
 
   FlavorConfig._internal(
@@ -29,28 +20,14 @@ class FlavorConfig {
     this.forYouBaseUrl,
     this.magazineBaseUrl,
   );
-  final Flavors flavor;
-  final String name;
-  final String customerBaseUrl;
-  final String moneysignBaseUrl;
-  final String forYouBaseUrl;
-  final String idsBaseUrl;
-  final String magazineBaseUrl;
-  static FlavorConfig? _instance;
-
-  static FlavorConfig get instance {
-    return _instance!;
-  }
-
-  static bool isDEV() => _instance!.flavor == Flavors.DEV;
-
-  static bool isQA() => _instance!.flavor == Flavors.QA;
-
-  static bool isUAT() => _instance!.flavor == Flavors.UAT;
-
-  static bool isPROD() => _instance!.flavor == Flavors.PROD;
-
-  static bool isPrePROD() => _instance!.flavor == Flavors.PRE_PROD;
+   Flavors? flavor;
+   String? name;
+   String? customerBaseUrl;
+   String? moneysignBaseUrl;
+   String? forYouBaseUrl;
+   String? idsBaseUrl;
+   String? magazineBaseUrl;
+   FlavorConfig? _instance;
 
   static String getValue(Flavors flavor) {
     switch (flavor) {

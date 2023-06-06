@@ -68,23 +68,23 @@ class _FlavorPage extends State<FlavorPage>{
     if (dropdownValue.contains('DEV')) {
       // FlavorConfig fc = new FlavorConfig(flavor: Flavors.DEV);
       FlavorConfig(flavor: Flavors.DEV);
-      sp.setString("customerBaseUrl", FlavorConfig.instance.customerBaseUrl);
-      print("fc.customerBaseUrl ${FlavorConfig.instance.customerBaseUrl}");
+      sp.setString("customerBaseUrl", FlavorConfig.getCustomerBaseUrl(Flavors.DEV));
+      print("fc.customerBaseUrl ${FlavorConfig.getCustomerBaseUrl(Flavors.DEV)}");
     } else if (dropdownValue.contains('QA')) {
       // FlavorConfig fc=new FlavorConfig(flavor: Flavors.QA);
       FlavorConfig(flavor: Flavors.QA);
       // sp.reload();
-      sp.setString("customerBaseUrl", FlavorConfig.instance.customerBaseUrl);
-      print("fc.customerBaseUrl ${FlavorConfig.instance.customerBaseUrl}");
+      sp.setString("customerBaseUrl", FlavorConfig.getCustomerBaseUrl(Flavors.QA));
+      print("fc.customerBaseUrl ${FlavorConfig.getCustomerBaseUrl(Flavors.QA)}");
     } else if (dropdownValue.contains('UAT')) {
        FlavorConfig(flavor: Flavors.UAT);
-      sp.setString("customerBaseUrl", FlavorConfig.instance.customerBaseUrl);
-      print("fc.customerBaseUrl ${FlavorConfig.instance.customerBaseUrl}");
+      sp.setString("customerBaseUrl", FlavorConfig.getCustomerBaseUrl(Flavors.UAT));
+      print("fc.customerBaseUrl ${FlavorConfig.getCustomerBaseUrl(Flavors.UAT)}");
     } else if (dropdownValue.contains('PROD')){
       FlavorConfig(flavor: Flavors.PROD);
       // sp.reload();
-      sp.setString("customerBaseUrl", FlavorConfig.instance.customerBaseUrl);
-      print("fc.customerBaseUrl ${FlavorConfig.instance.customerBaseUrl}");
+     // sp.setString("customerBaseUrl", FlavorConfig.instance.customerBaseUrl);
+      //print("fc.customerBaseUrl ${FlavorConfig.instance.customerBaseUrl}");
       //isProdForAppsFlyer = true;
     }
     else{
