@@ -10,16 +10,6 @@ class FlavorConfig {
    FlavorConfig({required Flavors? flavor}) {
 
   }
-
-  FlavorConfig._internal(
-    this.flavor,
-    this.name,
-    this.customerBaseUrl,
-    this.moneysignBaseUrl,
-    this.idsBaseUrl,
-    this.forYouBaseUrl,
-    this.magazineBaseUrl,
-  );
    Flavors? flavor;
    String? name;
    String? customerBaseUrl;
